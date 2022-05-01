@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from 'axios';
 import { backEndUrl, testUrl } from '../utils/urls.js'
+import "../styles/BioPage.css";
 
 export default function BioPage() {
     // stores the info about the user that's relevant to the bio page
@@ -23,9 +24,11 @@ export default function BioPage() {
         fetchData();
     }, []);
 
+    let testString = "Bio page placeholder--fetch requests are working properly, now that I have cors set up OK"
+
     return (
-        <section>
-            <h2>Bio page placeholder--fetch requests are working properly, now that I have cors set up OK</h2>
+        <section className="bio-page container-fluid">
+            <div className="row">{bioInfo.bio}</div>
         </section>
     )
 }

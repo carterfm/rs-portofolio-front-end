@@ -1,0 +1,46 @@
+.header {
+    height: 170px;
+    margin-top: 0px;
+    background-image: url("https://media.cntraveler.com/photos/59d690455d63061cb02575bf/master/w_4000,h_3000,c_limit/Hoia-Baciu-GRNWYM.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+
+    
+}
+
+.header h1 {
+    border-radius: 10px;
+    font-weight: bolder;
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 2.5em;
+    background-color: rgb(202, 196, 196);
+    color: #31343d;
+}
+
+.header a {
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgb(202, 196, 196);
+    color: #31343d;
+    margin-right: .5rem;
+
+    text-decoration: none;
+}
+
+.header a:hover, .header a:focus {
+    color: #8795b6;
+}
+
+/* .header .container-fluid .row {
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 767px){
+    .header .container-fluid .row {
+        justify-content: center;
+    }
+} */
