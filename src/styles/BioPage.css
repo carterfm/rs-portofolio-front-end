@@ -1,0 +1,12 @@
+.bio-page {
+    background-color: lightblue;
+}
+
+.bio-page .row .h1 {
+    font-weight: bolder;
+}
+
+.bio-page .portrait-holder .portrait-img {
+    height: 300px;
+    width: 200px;
+}
