@@ -24,11 +24,20 @@ export default function BioPage() {
         fetchData();
     }, []);
 
-    let testString = "Bio page placeholder--fetch requests are working properly, now that I have cors set up OK"
-
     return (
-        <section className="bio-page container-fluid">
-            <div className="row">{bioInfo.bio}</div>
+        <section className="bio-page container-fluid py-2">
+            <div className="row justify-content-center">
+                <h1 className="col-12 text-center">About Me</h1>
+                <div className="portrait-holder col-4 col-md-3 col-xl-2 justify-content-center py-2">
+                    <img src={bioInfo.portrait} className="card-img-top portrait-image"></img>
+                </div>
+                <div className="bio-holder col-10 col-lg-7 col-xl-8">
+                    <p>{bioInfo.bio}</p>
+                </div>
+            </div>
+            <div className="row justify-content-center">
+                {/* This is where we'll put the updates */}
+            </div>
         </section>
     )
 }

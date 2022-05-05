@@ -1,10 +1,9 @@
 .header {
     height: 170px;
-    margin-top: 0px;
+    margin: 0px;
     background-image: url("https://media.cntraveler.com/photos/59d690455d63061cb02575bf/master/w_4000,h_3000,c_limit/Hoia-Baciu-GRNWYM.jpg");
     background-size: cover;
-    background-repeat: no-repeat; 
-
+    background-repeat: no-repeat;
     
 }
 
