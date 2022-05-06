@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from 'axios';
 import { backEndUrl, testUrl } from '../utils/urls.js'
 import "../styles/BioPage.css";
+import UpdateList from '../components/UpdateList.js'
 
 export default function BioPage() {
     // stores the info about the user that's relevant to the bio page
@@ -14,7 +15,10 @@ export default function BioPage() {
                 // TODO: fix this id situation. Maybe swap it out so you can search a user by username or something
                 response = await axios.get(`${testUrl}/users/625ef3201a1466a43b3b04d4`);
                 console.log(response.data);
-                setBioInfo(response.data)
+                setBioInfo(response.data);
+                for (let i = response.data.updates.length - 1; i >= 0; i--) {
+                    console.log(response.data.updates[i]);
+                }
             } catch (err) {
                 console.log("=====\n" + err + "\n=====");
                 throw err;
@@ -26,7 +30,7 @@ export default function BioPage() {
 
     return (
         <section className="bio-page container-fluid py-2">
-            <div className="row justify-content-center">
+            <div className="row justify-content-center row-1">
                 <h1 className="col-12 text-center">About Me</h1>
                 <div className="portrait-holder col-4 col-md-3 col-xl-2 justify-content-center py-2">
                     <img src={bioInfo.portrait} className="card-img-top portrait-image"></img>
@@ -35,9 +39,7 @@ export default function BioPage() {
                     <p>{bioInfo.bio}</p>
                 </div>
             </div>
-            <div className="row justify-content-center">
-                {/* This is where we'll put the updates */}
-            </div>
+            {bioInfo.updates && <UpdateList updates={bioInfo.updates}/>}
         </section>
     )
 }
