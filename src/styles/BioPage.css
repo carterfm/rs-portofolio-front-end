@@ -6,6 +6,11 @@
     font-weight: bolder;
 }
 
+.bio-page .row-1 {
+    border-bottom: 2px solid;
+    border-color: rgb(202, 196, 196);
+}
+
 .bio-page .portrait-holder .portrait-img {
     height: 300px;
     width: 200px;
